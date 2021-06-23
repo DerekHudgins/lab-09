@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getAllCategories, getOneMusic, updateMusic } from './fetch-utils';
+import { deleteMusic, getAllCategories, getOneMusic, updateMusic } from './fetch-utils';
 
 export default class DetailPage extends Component {
     state = {
@@ -38,6 +38,10 @@ export default class DetailPage extends Component {
     }
     handlePriceChange = e => {
         this.setState({ price: e.target.value });
+    }
+    handleDelete = async () => {
+        await deleteMusic(this.state.id)
+        this.props.history.push('/')
     }
 
     handleSubmit = async e => {
@@ -87,6 +91,7 @@ export default class DetailPage extends Component {
                     </label>
                     <button>Update!</button>
                 </form>
+                <button onClick={this.handleDelete}>Delete</button>
             </div>
         )
     }
