@@ -50,11 +50,14 @@
 .home {
   display: flex;
   justify-content: flex-end;
+  justify-content: center;
+  background-color: burlywood;
 }
 .create {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  background-color: burlywood;
 }
 
 .musicList {
@@ -70,4 +73,13 @@
   margin: 10px;
   border-radius: 20px;
   border: solid 1px black;
+}
+* {
+  background-color: burlywood;
+}
+p {
+  background-color: green;
+}
+a {
+  text-decoration: none;
 }

@@ -5,8 +5,7 @@ import Header from './Header.js';
 
 function App() {
   return (
-    
-    <div>
+    <div className='main'>
       <Header/>
     
     </div>
