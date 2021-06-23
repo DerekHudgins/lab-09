@@ -14,14 +14,11 @@ export default class Header extends Component {
     render() {
         return (
             <Router>
-            <div>
-        
-        
-            <h1> A list of bands!</h1>
-            <h2> add some of your favorits </h2>
-        
-                <p><Link to="/">Home</Link></p>
-                <p><Link to="/create">Add new band!</Link>
+            <div className='head'>
+            <h1 className='title1'> A list of bands!</h1>
+            <h2 className='title2'> add some of your favorits </h2>
+                <p className='home'><Link to="/">Home</Link></p>
+                <p className='create'><Link to="/create">Add new band!</Link>
                 </p>
                 <Switch>
                     <Route 
